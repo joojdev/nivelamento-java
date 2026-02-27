@@ -1,5 +1,7 @@
 package br.edu.ifsp.list01;
 
+import java.util.Scanner;
+
 /*
     Escrever um programa que, dado um ano válido qualquer, verifica se ele é bissexto ou não:
 
@@ -18,14 +20,23 @@ public class Ex03 {
 
     public static void main(String[] args) {
         //Leia o input
+        Scanner scanner = new Scanner(System.in);
+        int year = scanner.nextInt();
+
         //Crie uma variável do tipo deste arquivo. Exemplo: Ex02 ex = new Ex02();
+        Ex03 ex = new Ex03();
+
         //Escreva o resultado da chamada do método compute() aqui
+        System.out.println(ex.compute(year));
     }
 
 
     String compute(int input) {
-        String output = null;
-        //put your logic here
+        String output = "Ano nao bissexto";
+
+        if (input == 0) return "Erro";
+        if ((input % 400 == 0) || (input % 4 == 0 && input % 100 != 0)) output = "Ano bissexto";
+
         return output;
     }
 }
