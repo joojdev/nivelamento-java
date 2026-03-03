@@ -20,6 +20,7 @@ class Ex01 {
     public static void main(String[] args) {
         final Scanner scanner = new Scanner(System.in);
         final int input = scanner.nextInt();
+        scanner.close();
         final Ex01 ex01 = new Ex01();
         System.out.println(ex01.compute(input));
     }

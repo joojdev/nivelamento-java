@@ -26,6 +26,7 @@ public class Ex02 {
         int a = scanner.nextInt();
         int b = scanner.nextInt();
         int c = scanner.nextInt();
+        scanner.close();
 
         //Crie uma variável do tipo deste arquivo. Exemplo: Ex02 ex = new Ex02();
         Ex02 ex = new Ex02();

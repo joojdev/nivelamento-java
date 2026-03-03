@@ -22,6 +22,7 @@ public class Ex03 {
         //Leia o input
         Scanner scanner = new Scanner(System.in);
         int year = scanner.nextInt();
+        scanner.close();
 
         //Crie uma variável do tipo deste arquivo. Exemplo: Ex02 ex = new Ex02();
         Ex03 ex = new Ex03();

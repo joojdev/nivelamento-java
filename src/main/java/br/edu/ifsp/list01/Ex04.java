@@ -25,6 +25,7 @@ public class Ex04 {
         int money = scanner.nextInt();
         int chocolatePrice = scanner.nextInt();
         int wraps = scanner.nextInt();
+        scanner.close();
 
         //Crie uma variável do tipo deste arquivo. Exemplo: Ex02 ex = new Ex02();
         Ex04 ex = new Ex04();

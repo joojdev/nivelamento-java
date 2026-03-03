@@ -1,5 +1,7 @@
 package br.edu.ifsp.list01;
 
+import java.util.Scanner;
+
 /*
     Alan quer comprar limões para fazer uma limonada. Próximo da sua casa há um mercadinho que vende limões da seguinte
     forma: O primeiro limão é vendido por C centavos, o segundo por C − 1 centavos, o terceiro por C − 2 e assim
@@ -23,13 +25,29 @@ public class Ex08 {
 
     public static void main(String[] args) {
         //Leia o input
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int c = scanner.nextInt();
+        scanner.close();
+
         //Crie uma variável do tipo deste arquivo. Exemplo: Ex02 ex = new Ex02();
+        Ex08 ex = new Ex08();
+
         //Escreva o resultado da chamada do método compute() aqui
+        System.out.println(ex.compute(n, c));
     }
 
     int compute(int n, int c) {
-        int output = -1;
-        //put your logic here
-        return output;
+        int result = 0;
+
+        int price = c;
+        for (int i = 0; i < n; i++) {
+            result += price;
+            if (price > 1) {
+                price -= 1;
+            }
+        }
+
+        return result;
     }
 }
